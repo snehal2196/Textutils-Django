@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %} Analyze {% endblock title%}
+
+{% block body %}
+<div class="container px-4">
+
+
+    <div class="row py-2" style="margin-bottom:350px">
+        <div class="col">
+            <h3 class="py-2">
+                Your Analyzed Text --
+                <small class="text-muted">{{purpose}}</small>
+            </h3>
+            <div class="p-3 border bg-light">
+                <textarea class="form-control" placeholder="Leave a comment here" id="text" name="text"
+                    style="height: 100px">
+
+            {{analyzed_text}}
+      </textarea>
+
+                <form action='/'>
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end py-3">
+                        <button class="btn btn-primary me-md-2" type="submit">Back</button>
+
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock body %}
